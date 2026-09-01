@@ -8,7 +8,7 @@ const URI = process.env.MONGOURI;
 
 async function connectDB() {
   if (!URI) {
-    console.error('MONGOURI no está definido en .env');
+    console.error('MONGOURI no está definido en el .env');
     return;
   }
 
@@ -17,7 +17,7 @@ async function connectDB() {
     await mongoose.connect(URI);
     console.log('MongoDB conectado correctamente');
   } catch (err) {
-    console.error('Error al conectar a MongoDB:', err.message || err);
+    console.error('Error al conectar a MongoDB database:', err.message || err);
   }
 }
 
